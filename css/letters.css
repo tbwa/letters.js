@@ -2,9 +2,10 @@
 	margin: 0;
 	padding: 0;
 	width: 1%;
-	display:table-row;
+	display: table-row;
 }
 
 #letters img {
 	vertical-align: top;
 }
+

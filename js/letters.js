@@ -104,7 +104,8 @@ var specialsArray   = new Array(
 	, specialPath   + 'dot'
 	, specialPath   + 'left_chevron'
 	, specialPath   + 'right_chevron'
-	, specialPath   + 'comma');
+	, specialPath   + 'comma'
+	, specialPath	+ 'backslash');
 
 function preloadimages(arr){
 	var newimages = [], loadedimages=0
@@ -467,9 +468,9 @@ document.onkeypress = function(event){
 			document.getElementById('letters').innerHTML += '<img id="' + id + '" src=' + specialsArray[17] + '.png>';
 		break;
 
-		//case \:
-		//	document.getElementById('letters').innerHTML += '<img id="' + id + '" src="fonts/specials/backslash.png" >';
-		//break;
+		case "\\":
+			document.getElementById('letters').innerHTML += '<img id="' + id + '" src=' + specialsArray[31] + '.png>';
+		break;
 
 		case "{":
 			document.getElementById('letters').innerHTML += '<img id="' + id + '" src=' + specialsArray[18] + '.png>';
