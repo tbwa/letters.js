@@ -1,4 +1,3 @@
-
 var lowercasePath = 'fonts/lowercase/';
 var uppercasePath = 'fonts/uppercase/';
 var numberPath = 'fonts/number/';
@@ -116,10 +115,9 @@ function preloadimages(arr){
 		if (loadedimages == arr.length){
 			postaction(newimages) //call postaction and pass in newimages array as parameter
 		}
-		
 	}
 	for (var i = 0; i < arr.length; i++){
-		newimages[i] = new Image()
+		newimages[i] = new Image();
 		newimages[i].src = arr[i] + '.png';
 		newimages[i].onload = function(){
 			imageloadpost();
@@ -156,7 +154,7 @@ function getChar(event){
 
 	if(event.which == null){
 		return String.fromCharCode(event.keyCode) // IE
-	} else if(event.which!=0 && event.charCode!=0){
+	} else if(event.which != 0 && event.charCode != 0){
 		return String.fromCharCode(event.which)   // the rest
 	} else {
 		return null;
@@ -193,9 +191,6 @@ document.onkeydown = function(event){
 }
 
 document.onkeypress = function(event){
-
-
-	
 	var char = getChar(event || window.event);
 	console.log(char)
 
@@ -399,131 +394,99 @@ document.onkeypress = function(event){
 		case "`":
 			document.getElementById('letters').innerHTML += '<img id="' + id + '" src=' + specialsArray[0] + '.png>';
 		break;
-
 		case "~":
 			document.getElementById('letters').innerHTML += '<img id="' + id + '" src=' + specialsArray[1] + '.png>';
 		break;
-
 		case "!":
 			document.getElementById('letters').innerHTML += '<img id="' + id + '" src=' + specialsArray[2] + '.png>';
 		break;
-
 		case "@":
 			document.getElementById('letters').innerHTML += '<img id="' + id + '" src=' + specialsArray[3] + '.png>';
 		break;
-
 		case "#":
 			document.getElementById('letters').innerHTML += '<img id="' + id + '" src=' + specialsArray[4] + '.png>';
 		break;
-
 		case "$":
 			document.getElementById('letters').innerHTML += '<img id="' + id + '" src=' + specialsArray[5] + '.png>';
 		break;
-
 		case "%":
 			document.getElementById('letters').innerHTML += '<img id="' + id + '" src=' + specialsArray[6] + '.png>';
 		break;
-
 		case "^":
 			document.getElementById('letters').innerHTML += '<img id="' + id + '" src=' + specialsArray[7] + '.png>';
 		break;
-
 		case "&":
 			document.getElementById('letters').innerHTML += '<img id="' + id + '" src=' + specialsArray[8] + '.png>';
 		break;
-
 		case "*":
 			document.getElementById('letters').innerHTML += '<img id="' + id + '" src=' + specialsArray[9] + '.png>';
 		break;
-
 		case "(":
 			document.getElementById('letters').innerHTML += '<img id="' + id + '" src=' + specialsArray[10] + '.png>';
 		break;
-
 		case ")":
 			document.getElementById('letters').innerHTML += '<img id="' + id + '" src=' + specialsArray[11] + '.png>';
 		break;
-
 		case "_":
 			document.getElementById('letters').innerHTML += '<img id="' + id + '" src=' + specialsArray[12] + '.png>';
 		break;
-
 		case "-":
 			document.getElementById('letters').innerHTML += '<img id="' + id + '" src=' + specialsArray[13] + '.png>';
 		break;
-
 		case "+":
 			document.getElementById('letters').innerHTML += '<img id="' + id + '" src=' + specialsArray[14] + '.png>';
 		break;
-
 		case "=":
 			document.getElementById('letters').innerHTML += '<img id="' + id + '" src=' + specialsArray[15] + '.png>';
 		break;
-
 		case "[":
 			document.getElementById('letters').innerHTML += '<img id="' + id + '" src=' + specialsArray[16] + '.png>';
 		break;
-
 		case "]":
 			document.getElementById('letters').innerHTML += '<img id="' + id + '" src=' + specialsArray[17] + '.png>';
 		break;
-
 		case "\\":
 			document.getElementById('letters').innerHTML += '<img id="' + id + '" src=' + specialsArray[31] + '.png>';
 		break;
-
 		case "{":
 			document.getElementById('letters').innerHTML += '<img id="' + id + '" src=' + specialsArray[18] + '.png>';
 		break;
-
 		case "}":
 			document.getElementById('letters').innerHTML += '<img id="' + id + '" src=' + specialsArray[19] + '.png>';
 		break;
-
 		case "|":
 			document.getElementById('letters').innerHTML += '<img id="' + id + '" src=' + specialsArray[20] + '.png>';
 		break;
-
 		case "'":
 			document.getElementById('letters').innerHTML += '<img id="' + id + '" src=' + specialsArray[21] + '.png>';
 		break;
-
 		case '"':
 			document.getElementById('letters').innerHTML += '<img id="' + id + '" src=' + specialsArray[22] + '.png>';
 		break;
-
 		case ';':
 			document.getElementById('letters').innerHTML += '<img id="' + id + '" src=' + specialsArray[23] + '.png>';
 		break;
-
 		case ':':
 			document.getElementById('letters').innerHTML += '<img id="' + id + '" src=' + specialsArray[24] + '.png>';
 		break;
-
 		case '/':
 			document.getElementById('letters').innerHTML += '<img id="' + id + '" src=' + specialsArray[25] + '.png>';
 		break;
-
 		case '?':
 			document.getElementById('letters').innerHTML += '<img id="' + id + '" src=' + specialsArray[26] + '.png>';
 		break;
-
 		case '.':
 			document.getElementById('letters').innerHTML += '<img id="' + id + '" src=' + specialsArray[27] + '.png>';
 		break;
-
 		case '<':
 			document.getElementById('letters').innerHTML += '<img id="' + id + '" src=' + specialsArray[28] + '.png>';
 		break;
-
 		case '>':
 			document.getElementById('letters').innerHTML += '<img id="' + id + '" src=' + specialsArray[29] + '.png>';
 		break;
-
 		case ',':
 			document.getElementById('letters').innerHTML += '<img id="' + id + '" src=' + specialsArray[30] + '.png>';
 		break;
-
 		default:
 			return (event.keyCode != 8);
 		break;
@@ -588,22 +551,4 @@ preloadimages(specialsArray).done(function(images){
  		lowercaseImages[i] = images[i];
  	};*/
 });
-
-
-
-/* MOBILE SUPPORT */
-
-function setFocus() { 
-
-	var field = document.createElement('input');
-	field.setAttribute('type', 'text');
-	document.body.appendChild(field);
-
-	setTimeout(function() {
-    	field.focus();
-	    
-	}, 50);
-}
-
-document.addEventListener("touchstart", setFocus, true);
 
